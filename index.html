@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Minor Project</title>
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <!-- Custom Theme JavaScript -->
+    <!--script src="js/grayscale.js"></script>
+	<!-script src="js/nouislider.min.js"></script-->
+	<script src="js/topojson.v1.min.js"></script>
+	
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+	<link href="css/nouislider.css" rel="stylesheet">
+	<!--SCRIPTS FOR GRAPHS-->
+	<script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/d3.js"></script>
+	<!--script src="js/onload.js"></script-->
+	<script src="js/onloadslider.js"></script>
+	<script src="js/wNumb.js"></script>
+	
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>	
+	<script>
+	function load(){
+		loadall1();
+		loadall2();
+		loadall3();
+		loadall4();
+		loadall5();
+		Changing(1);
+	}
+	function Changing(i) {
+    if(i==1){
+		
+        document.getElementById("SC").style.display = "block";
+        document.getElementById("PHC").style.display = "none";
+		document.getElementById("CHC").style.display = "none";
+		document.getElementById("SDH").style.display = "none";
+		document.getElementById("DH").style.display = "none";
+		document.getElementById("HOME").style.display = "none";
+    } else if(i==2) {
+	
+        document.getElementById("SC").style.display = "none";
+        document.getElementById("PHC").style.display = "block";
+		document.getElementById("CHC").style.display = "none";
+		document.getElementById("SDH").style.display = "none";
+		document.getElementById("DH").style.display = "none";
+		document.getElementById("HOME").style.display = "none";
+    } else if(i==3) {
+	
+        document.getElementById("SC").style.display = "none";
+        document.getElementById("PHC").style.display = "none";
+		document.getElementById("CHC").style.display = "block";
+		document.getElementById("SDH").style.display = "none";
+		document.getElementById("DH").style.display = "none";
+		document.getElementById("HOME").style.display = "none";
+    } else if(i==4) {
+	
+		document.getElementById("SC").style.display = "none";
+        document.getElementById("PHC").style.display = "none";
+		document.getElementById("CHC").style.display = "none";
+		document.getElementById("SDH").style.display = "block";
+		document.getElementById("DH").style.display = "none";
+		document.getElementById("HOME").style.display = "none";
+    } else if(i==5) {
+	
+        document.getElementById("SC").style.display = "none";
+        document.getElementById("PHC").style.display = "none";
+		document.getElementById("CHC").style.display = "none";
+		document.getElementById("SDH").style.display = "none";
+		document.getElementById("DH").style.display = "block";
+		document.getElementById("HOME").style.display = "none";
+    } else if(i==0) {
+	
+        document.getElementById("SC").style.display = "none";
+        document.getElementById("PHC").style.display = "none";
+		document.getElementById("CHC").style.display = "none";
+		document.getElementById("SDH").style.display = "none";
+		document.getElementById("DH").style.display = "none";
+		document.getElementById("HOME").style.display = "block";
+    } 
+}
+    </script>
+	
+	</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="load()">
+<header class="intro">
+    <div class="intro-body">
+	<div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="brand-heading">CHATTISGARH<br>Health Care<br>Facilities</h1>
+                        <p class="intro-text"></p>
+						<div class="bttn">
+                        <a href="#visualization" class="btn page-scroll" style="color:black;">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="row" id="visualization">
+        <div class="col-lg-8 col-lg-offset-2">
+	<h1>Visualization Map</h1>
+<nav id="nav-1">
+  <a class="link-1" href="#nav-1" onclick="Changing(1)">SC</a>
+  <a class="link-1" href="#nav-1" onclick="Changing(2)">PHC</a>
+  <a class="link-1" href="#nav-1" onclick="Changing(3)">CHC</a>
+  <a class="link-1" href="#nav-1" onclick="Changing(4)">SDH</a>
+  <a class="link-1" href="#nav-1" onclick="Changing(5)">DH</a>
+</nav>
+	
+  <div>
+  <div class="toolt1 hidden" ></div>
+  <div class="map1" id="SC"><h2>SC - Sub-Centers</h2></div>
+  </div>
+
+<div>
+        <div class="toolt2 hidden"></div>
+       <div class="map2" id="PHC"><h2>PHC - Primary Health Centers</h2></div>
+</div>
+<div>
+        <div class="toolt3 hidden"></div>
+  <div class="map3" id="CHC" ><h2>CHC - Community Health Centers<h2></div>
+</div>
+<div>
+        <div class="toolt4 hidden"></div>
+  <div class="map4" id="SDH"><h2>SDH - Sub-District Hospitals</h2></div> 
+</div>
+<div>
+        <div class="toolt5 hidden"></div>
+  <div class="map5" id="DH"><h2>DH - District Hospitals</h2>
+</div>
+
+			
+	
+
+
+</body>
+
+</html>
